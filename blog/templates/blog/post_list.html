@@ -1,27 +1,14 @@
-#primeiro site para treinar
 
+    {% extends 'blog/base.html' %}
 
-<html>
-    <head>
-        <title>Diogo website</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="">Diogo website</a></h1>
-        </div>
-
-        <div>
-            <p>published: 06.07.2018, 15:42</p>
-            <h2><a href="">My first post on the internet(in reallity it was the second, but I'm not constant with programming)</a></h2>
-            <p>Here I need to write different things every week, trying to explain by my words (in English, not my mother language) things that I see
-            during my days and my studies.</p>
-        </div>
-
-        <div>
-            <p>published: 06.07.2018, 15:45</p>
-            <h2><a href="">My second post (not in reality the second one)</a></h2>
-            <p>Nowadeys I'm a Computer Engineer student (I'm graduated in Mechanical Engineering), I'm really enjoying the university and the
-            oportunity to learn a lot of modern tools, like web-technologies.</p>
-        </div>
-    </body>
-</html>
+        {% block content %}
+            {% for post in posts %}
+                <div class="post">
+                    <div class="date">
+                        <p>published: {{ post.published_date }}</p>
+                    </div>
+                    <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            {% endfor %}
+        {% endblock %}
