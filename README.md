@@ -1,0 +1,3 @@
+# Meu primeiro blog
+
+Aprendendo como criar um blog com django, html, css ...

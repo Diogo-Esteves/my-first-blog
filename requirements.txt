@@ -1,11 +1,2 @@
-adium-theme-ubuntu==0.3.4
-ecdsa==0.13
-paramiko==1.16.0
-pbr==4.2.0
-pycrypto==2.6.1
-six==1.11.0
-stevedore==1.29.0
-unity-lens-photos==1.0
-virtualenv==16.0.0
-virtualenv-clone==0.3.0
-virtualenvwrapper==4.8.2
+django==1.9.7
+pytz==2018.5
